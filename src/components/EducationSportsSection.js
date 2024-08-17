@@ -12,7 +12,7 @@ const EducationSportsSection = () => {
 
     const sportsItems = [
         { name: "Drumkeerin GAA Club", image: `${process.env.PUBLIC_URL}/images/gaa.jpg`, link: "https://drumkeeringaa.com" },
-        { name: "Upcoming Sports Events", image: `${process.env.PUBLIC_URL}/images/upcomingsports.jpg`, link: "https://www.facebook.com/DrumkeerinGAAclub?ref=embed_page" },
+        { name: "Upcoming Sports Events", image: `${process.env.PUBLIC_URL}/images/fb.jpg`, link: "https://www.facebook.com/DrumkeerinGAAclub?ref=embed_page" },
     ];
 
     useEffect(() => {
