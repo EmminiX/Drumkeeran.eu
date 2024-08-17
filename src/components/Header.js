@@ -43,7 +43,7 @@ const Header = () => {
                     <a href="#outdoors" onClick={(e) => { e.preventDefault(); scrollToSection('outdoors'); }}>Outdoors</a>
                     <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>Contact</a>
                 </div>
-                <a href="https://gofund.me/42214d7c" className="donate-button" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.gofundme.com/f/drumkeeran" className="donate-button" target="_blank" rel="noopener noreferrer">
                     ❤️ Donate 4FreeWi-Fi Project
                 </a>
             </nav>
