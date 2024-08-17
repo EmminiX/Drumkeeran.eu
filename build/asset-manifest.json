@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EmminiX/drumkeeran.eu.git/static/css/main.2076c6c8.css",
+    "main.js": "/EmminiX/drumkeeran.eu.git/static/js/main.4ebab0bf.js",
+    "index.html": "/EmminiX/drumkeeran.eu.git/index.html",
+    "main.2076c6c8.css.map": "/EmminiX/drumkeeran.eu.git/static/css/main.2076c6c8.css.map",
+    "main.4ebab0bf.js.map": "/EmminiX/drumkeeran.eu.git/static/js/main.4ebab0bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2076c6c8.css",
+    "static/js/main.4ebab0bf.js"
+  ]
+}

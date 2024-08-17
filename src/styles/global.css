@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Orbitron:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #116466;
+    --secondary-color: #D1E8E2;
+    --background-color: rgba(39, 39, 39, 0.8);
+    --overlay-color: rgba(44, 53, 49, 0.7);
+    --text-color: #D1E8E2;
+    --text-color-light: #A3C6C4;
+    --text-color-dark: #0392f8;
+    --backstop-button-color: #FF8C00;
+    --transition-speed: 0.3s;
+    --fade-transition: 0.8s;
+    --content-width: min(90%, 1200px);
+    --section-padding: clamp(2rem, 5vw, 5rem);
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+.App {
+    text-align: center;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: clamp(0.5rem, 2vw, 1.25rem) 0;
+    color: var(--text-color);
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.2;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.75rem, 4vw, 2rem); }
+h3 { font-size: clamp(1.5rem, 3.5vw, 1.75rem); }
+h4 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+h5 { font-size: clamp(1.1rem, 2.5vw, 1.25rem); }
+h6 { font-size: clamp(1rem, 2vw, 1.1rem); }
+
+a:not(.nav-links a) {
+    text-decoration: none;
+    transition: color var(--transition-speed) ease, outline var(--transition-speed) ease;
+}
+
+a:not(.nav-links a):hover,
+a:not(.nav-links a):focus {
+    color: var(--text-color);
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+button {
+    border: none;
+    padding: clamp(0.5rem, 2vw, 0.625rem) clamp(1rem, 3vw, 1.25rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+button:hover, button:focus {
+    outline: 2px solid var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+    transition: opacity var(--fade-transition) ease-out, transform var(--fade-transition) ease-out;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content-box {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: clamp(1rem, 3vw, 1.25rem);
+    border-radius: 8px;
+    margin: clamp(0.625rem, 2vw, 1.25rem);
+    max-width: var(--content-width);
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.8);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.content-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: clamp(1rem, 3vw, 1.25rem);
+    right: clamp(1rem, 3vw, 1.25rem);
+    z-index: 1000;
+    background-color: rgba(55, 198, 255, 0.6);
+    color: var(--text-color);
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: clamp(2.5rem, 8vw, 3.125rem);
+    height: clamp(2.5rem, 8vw, 3.125rem);
+    font-size: clamp(1.25rem, 4vw, 1.625rem);
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top:hover, .back-to-top:focus {
+    background-color: rgba(3, 121, 205, 0.6);
+    transform: translateY(-5px);
+}
+
+.fade-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity var(--fade-transition) ease-in-out, transform var(--fade-transition) ease-in-out;
+    will-change: opacity, transform;
+}
+
+.fade-transition.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+p, li {
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Home section specific styles */
+.home-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    transition: opacity 1s ease-out;
+}
+
+.home-section .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.home-section .video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-section .video-controls {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.home-section .content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 5;
+}
+
+.home-section .welcome-text {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-align: center;
+    padding-top: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid system */
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+}
+
+/* Responsive utilities */
+.hide-on-mobile { display: none; }
+.show-on-mobile { display: block; }
+
+@media (min-width: 768px) {
+    .hide-on-mobile { display: block; }
+    .show-on-mobile { display: none; }
+}
+
+/* Larger screens */
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+
+    .content-box {
+        max-width: 1100px;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1800px) {
+    html {
+        font-size: 20px;
+    }
+
+    .content-box {
+        max-width: 1400px;
+    }
+}
+
+/* High-resolution screens */
+@media (min-resolution: 192dpi) {
+    body {
+        font-weight: 300;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
