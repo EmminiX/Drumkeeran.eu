@@ -38,7 +38,7 @@ const businesses = [
             "the beating heart of Drumkeeran, so it is. From your daily bread to a feast for your livestock, it's got" +
             " everything bar the kitchen sink. And with a deli that'd tempt a saint off their fast, it's no wonder half" +
             " the village seems to live here. A true jack-of-all-trades, and master of them all!", link:"https://www.facebook.com/nearbydrumkeeranstores/" },
-    { id: 10, name: "Wynne's Market Bar", type: "Restaurant/Petrol Station", description: "Now here's a place that knows how to multi-task! " +
+    { id: 10, name: "Wynne's Market Bar", type: "Pub/Petrol Station", description: "Now here's a place that knows how to multi-task! " +
             "Wynne's Market Bar is where you can fill your tank and wet your whistle in one go. It's a slice of old Ireland " +
             "with a modern twist, where the banter flows as smoothly as the petrol. Whether you're after a pint or a full " +
             "tank, Wynne's has got you covered, rain or shine.", link:"https://www.facebook.com/WynnesMarketBar/" },
