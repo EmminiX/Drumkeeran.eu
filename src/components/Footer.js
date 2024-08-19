@@ -19,7 +19,7 @@ const Footer = () => {
 
     return (
         <footer className={`footer ${showFooter ? 'visible' : ''}`}>
-            <p className='copyright'><a href="https://emmihub.com" target="_blank" rel="noopener noreferrer">&copy; 2024 @Emmi C. '🅔ngaging 🅜inds, 🅜erging 🅘deas'. All rights reserved.</a></p>
+            <p className='copyright'><a href="http://emmihub.com" target="_blank" rel="noopener noreferrer">&copy; 2024 @Emmi C. '🅔ngaging 🅜inds, 🅜erging 🅘deas'. All rights reserved.</a></p>
                 <div className="social-links">
                     <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <svg className="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
