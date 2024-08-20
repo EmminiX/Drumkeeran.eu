@@ -43,4 +43,4 @@ This template is public and free to use. Feel free to clone, modify, and adapt i
 
 This project is open source and available under the MIT License.
 
-Enjoy using this template to create a vibrant online presence for your community!
+Enjoy using this template to create a vibrant online presence for your community.
