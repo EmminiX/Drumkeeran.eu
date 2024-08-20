@@ -42,7 +42,7 @@ const ContactSection = () => {
         setIsSubmitting(true);
         try {
             // Send the form data to EmailJS
-            await emailjs.send('service_4p2i5ja', 'YOUR_EMAILJS_TEMPLATE_ID', formData);
+            await emailjs.send('service_4p2i5ja', 'template_akl8wrv', formData);
             setSubmitMessage('Thank you for your message. We will get back to you soon!');
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
