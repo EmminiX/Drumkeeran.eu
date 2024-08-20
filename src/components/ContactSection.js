@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/components/ContactSection.css';
-import emailjs from 'emailjs-com';
-
-// Initialize EmailJS with your User ID
-emailjs.init('service_4p2i5ja');
-
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
     const [opacity, setOpacity] = useState(0);
@@ -16,6 +12,7 @@ const ContactSection = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
     const sectionRef = useRef(null);
+    const form = useRef();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,24 +37,29 @@ const ContactSection = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+
         try {
-            // Send the form data to EmailJS
-            await emailjs.send('service_4p2i5ja', 'template_akl8wrv', formData);
+            await emailjs.sendForm(
+                'service_4p2i5ja', // Your EmailJS service ID
+                'template_akl8wrv', // Your EmailJS template ID
+                form.current,
+                'mVa5fPgAC-x0F5svZ' // Replace with your actual public key
+            );
             setSubmitMessage('Thank you for your message. We will get back to you soon!');
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
+            console.error('EmailJS error:', error);
             setSubmitMessage('An error occurred. Please try again later.');
         } finally {
             setIsSubmitting(false);
         }
     };
 
-
     return (
         <section id="contact" className="contact-section" ref={sectionRef} style={{ opacity }}>
             <div className="content-box transparent-bg">
                 <h2>Contact Us</h2>
-                <form className="contact-form" onSubmit={handleSubmit}>
+                <form ref={form} className="contact-form" onSubmit={handleSubmit}>
                     <input
                         type="text"
                         name="name"
