@@ -18,9 +18,9 @@ const businesses = [
             "Fiona's Takeaway is cooking up a storm. It's where the aroma of fresh, honest grub mingles with the laughter " +
             "of hungry locals. With prices that won't leave your wallet crying and service that comes with a smile as bright " +
             "as a Leitrim morning, it's the go-to spot for a bite that tastes like home.", link:"https://g.co/kgs/DM9NZnm" },
-    { id: 5, name: "Drumkeerin Credit Union", type: "Service", description: "Faith and begorrah, hasn't our wee " +
+    { id: 5, name: "Drumkeeran Credit Union", type: "Service", description: "Faith and begorrah, hasn't our wee " +
             "Credit Union gone and grown up? Now part of the Sligo family, it's like watching a child head off to university. " +
-            "But fear not, for the heart of Drumkeerin beats on in every transaction. With new online bells and whistles, " +
+            "But fear not, for the heart of Drumkeeran beats on in every transaction. With new online bells and whistles, " +
             "and our own still manning the fort on Saturdays, it's the best of both worlds, so it is.", link:"https://www.goldenpages.ie/drumkeeran-credit-union-drumkeeran/" },
     { id: 6, name: "Clarkes Butchers", type: "Butchers", description: "Ah, Clarkes Butchers, where the meat's so fresh " +
             "you'd swear the cows were grazing out back! This family-run gem is the pride of Main Street, offering up " +
