@@ -8,9 +8,9 @@ const AboutSection = () => {
     const timelineEvents = [
         { year: 1840, event: "Drumkeeran village is established" },
         { year: 1925, event: "Establishment of Local Fairs" },
-        { year: 1933, event: "Founding of Drumkeerin GAA Club" },
+        { year: 1933, event: "Founding of Drumkeeran GAA Club" },
         { year: 1950, event: "The local church is renovated" },
-        { year: 1970, event: "Formation of the Drumkeerin Development Association" },
+        { year: 1970, event: "Formation of the Drumkeeran Development Association" },
         { year: 1985, event: "Drumkeeran wins the Tidy Towns competition" },
         { year: 2010, event: "New community center opens" },
         { year: 2024, event: "Launch of Drumkeeran.eu and FreeWi-Fi Project" },
