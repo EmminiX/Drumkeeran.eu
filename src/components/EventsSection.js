@@ -89,11 +89,11 @@ const EventsSection = () => {
         <div className="event-buttons">
           <a href="https://www.facebook.com/drumkeerinfestival/" target="_blank" rel="noopener noreferrer" className="event-button">
             <img src={`${process.env.PUBLIC_URL}/images/festival-2024.jpg.jpeg`} alt="Event 1"/>
-            <p>Drumkeerin Festival</p>
+            <p>Drumkeeran Festival</p>
           </a>
           <a href="https://www.facebook.com/drumkeerinoldfairday/" target="_blank" rel="noopener noreferrer" className="event-button">
             <img src={`${process.env.PUBLIC_URL}/images/oldfair.jpeg`} alt="Event 2"/>
-            <p>Drumkeerin Old Fair Day</p>
+            <p>Drumkeeran Old Fair Day</p>
           </a>
           <a href="https://www.johnmckenna.ie" target="_blank" rel="noopener noreferrer" className="event-button">
             <img src={`${process.env.PUBLIC_URL}/images/music.jpg`} alt="Event 3"/>
