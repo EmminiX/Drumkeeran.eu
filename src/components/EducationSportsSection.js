@@ -6,12 +6,12 @@ const EducationSportsSection = () => {
     const sectionRef = useRef(null);
 
     const schools = [
-        { name: "Drumkeerin National School", image: `${process.env.PUBLIC_URL}/images/school.jpg`, link: "http://drumkeerinns.scoilnet.ie/blog/" },
+        { name: "Drumkeeran National School", image: `${process.env.PUBLIC_URL}/images/school.jpg`, link: "http://drumkeerinns.scoilnet.ie/blog/" },
         { name: "Lough Allen College", image: `${process.env.PUBLIC_URL}/images/college.jpg`, link: "https://www.loughallencollege.ie" },
     ];
 
     const sportsItems = [
-        { name: "Drumkeerin GAA Club", image: `${process.env.PUBLIC_URL}/images/gaa.jpg`, link: "https://drumkeeringaa.com" },
+        { name: "Drumkeeran GAA Club", image: `${process.env.PUBLIC_URL}/images/gaa.jpg`, link: "https://drumkeeringaa.com" },
         { name: "Upcoming Sports Events", image: `${process.env.PUBLIC_URL}/images/fb.jpg`, link: "https://www.facebook.com/DrumkeerinGAAclub?ref=embed_page" },
     ];
 
